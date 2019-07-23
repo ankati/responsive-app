@@ -1,108 +1,120 @@
-<div class="header row">
-  <h1>Header</h1>
-</div>
-<div class="header row">
-  <div class="col-m-6 col-6">
-      <h2>Welcome!</h2><br>
-      <h1>Virtual Wallet</h1><br>
-      <h3>Checkings & Savings. Together.</h3>
-  </div>
-  <div class="col-m-6 col-6" style="padding:0px">
-      <img src="../assets/img/vw_overview_good.svg"></div>
-</div>
-<div class="row">
-  <div class="col-6 col-m-12">
-      <div class="row">
-              <div>
-                      <div class="col-6 col-m-6 step done"><p>WHAT TO EXPECT </p></div>
-                      <div class="col-6 col-m-6 step last"><p>ACCOUNT DETAILS</p></div>
-              </div>
-
-      </div>
-      <div class="row">
-          <div class="col-6 col-m-6">
-              <img src="../assets/img/step1.png">
-              <p>First, tell us about yourself
-                  You will need a photo ID. We'll also have you answer a few easy questions.</p>
-          </div>
-          <div class="col-6 col-m-6">
-              <img src="../assets/img/step2.png">
-              <p>If your account is approved, make your first deposit
-                  using one of our many funding options.</p>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-6 col-m-6">
-              <img src="../assets/img/step_ready_to_bank.png">
-              <p>If your account is approved, get ready to bank
-                  Enjoy the benefits your account has to offer.</p>
-          </div>
-      </div>
-  </div>
-  <div class="col-6 col-m-12">
-      <legend>Let's Get started</legend>
-      <p>To start we need some information for you</p><br>
-      <legend>Are you a U.S. citizen?</legend>
-      <div>
-          <div style="padding: 10px">
-              <input type="radio" id="currentUserYes" value="yes">
-              <label for="currentUserYes">Yes</label>
-          </div>
-          <div style="padding: 10px;">
-              <input id="currentUseNo" type="radio" value="no">
-              <label for="currentUserNo">No</label>
-          </div>
-      </div>
-
-      <legend>What's your relationship with?</legend>
-      <div>
-          <div style="padding: 10px">
-              <input type="radio" id="currentUserYes" value="yes">
-              <label for="currentUserYes">Yes</label>
-          </div>
-          <div style="padding: 10px">
-              <input id="currentUseNo" type="radio" value="no">
-              <label for="currentUserNo">No</label>
-          </div>
-          <div style="padding: 10px">
-              <input id="currentUseNo" type="checkbox" value="no">
-              <label for="currentUserNo">Add co-appicant</label>
-          </div>
-      </div>
-      <strong>INFORMATION ABOUT PROCEDURES FOR OPENING A NEW ACCOUNT</strong> <br>
-      <p>   To help the government fight the funding of terrorism and money 
-              laundering activities, Federal law requires all financial institutions to obtain,
-               verify, and record information that identifies each customer that opens an account.
-                What this means for you: When you open an account, we will ask you your name, address, 
-                date of birth and other information that will allow us to
-                 identify you. We may also ask to see your 
-              driver's license or other identifying information.</p>
-      <button class="next">Next</button>
-  </div>
-</div>
-<div class="footer-bar row"></div>
-<div class="footer">
-  <div class="row">
-      <div class="col-m-12 col-6">
-          <div class="row">
-              <div class="col-m-12 col-12">
-                  <ul class="ulele">
-                      <li><a>Security &amp; Privacy</a></li>
-                      <li class="last-li"><a>Privacy Policy</a></li>
-                  </ul>
-              </div>
-              <div class="col-m-12 col-12">
-                   <span class="spanClass"><img src="" alt="">
-                      Feedback </span>   
-                    </div>
-          </div>
-      </div>
-      <div class="col-m-12 col-6" >
-          <span style="padding: 0;
-          float: left;
-          margin: 20px 0 0 20px;">©2019 The  Financial Services Group, Inc. All rights reserved.</span>
-      </div>
+<div class="example-container">
 
 
-  </div>
+    <form [formGroup]="userForm" (ngSubmit)="logFormValue()">
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <mat-form-field>
+                <input matInput class="form-control" type="text" formControlName="firstName">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <label for="firstName">Last Name</label>
+            <mat-form-field>
+                <input matInput class="form-control" type="text" formControlName="lastName">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <label for="firstName">Middle Name</label>
+            <mat-form-field>
+                <input matInput class="form-control" type="text" formControlName="middleName">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <label for="firstName">Suffix</label>
+            <mat-form-field>
+                <input matInput class="form-control" type="text" formControlName="suffix">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <label for="firstName">DOB</label>
+            <mat-form-field>
+                <input matInput class="form-control" type="text" formControlName="dob">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <label for="firstName"> SSN </label>
+            <mat-form-field>
+                <input matInput class="form-control" type="text" formControlName="ssn">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <label for="firstName">Email Address</label>
+            <mat-form-field>
+                <input matInput class="form-control" type="text" formControlName="emailAdress">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <label for="firstName"> Primary Phone Number</label>
+            <mat-form-field>
+                <input matInput class="form-control" type="text" formControlName="primaryPhoneNumber">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <label for="firstName"> Alternative Phone Number</label>
+            <mat-form-field>
+                <input matInput class="form-control" type="text" formControlName="alternativePhoneNumber">
+            </mat-form-field>
+        </div>
+
+        <div formGroupName="address">
+            <div class="form-group">
+                <label for="street">Adress1</label>
+                <mat-form-field>
+                    <input matInput type="text"   formControlName="adress1"
+                        class="form-control">
+                </mat-form-field>
+                <label for="street">Adress2</label>
+                <mat-form-field>
+                    <input matInput type="text"   formControlName="adress2"
+                        class="form-control">
+                </mat-form-field>
+                <label for="street">Zipcode</label>
+                <mat-form-field>
+                    <input matInput type="text"   formControlName="zipcode"
+                        class="form-control">
+                </mat-form-field>
+                <label for="street">city</label>
+                <mat-form-field>
+                    <input matInput type="text"   formControlName="city"
+                        class="form-control">
+                </mat-form-field>
+                <label for="street">state</label>
+                <mat-form-field>
+                    <input matInput type="text"   formControlName="state"
+                        class="form-control">
+                </mat-form-field>
+                <label for="street">country</label>
+                <mat-form-field>
+                    <input matInput type="text"   formControlName="country"
+                        class="form-control">
+                </mat-form-field>
+                <label for="street">livedatthisadress</label>
+                <mat-form-field>
+                    <input matInput type="text"   formControlName="livedatthisadress"
+                        class="form-control">
+                </mat-form-field>
+                <label for="street">house status</label>
+                <mat-form-field>
+                    <input matInput type="text"   formControlName="houseStatus"
+                        class="form-control">
+                </mat-form-field>
+                <label for="street">monthly paying amount</label>
+                <mat-form-field>
+                    <input matInput type="text"   formControlName="monthlypayingamount"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+           
+        </div>
+        <mat-form-field>
+                <input matInput type="text"   formControlName="applicationId"
+                    class="form-control">
+            </mat-form-field>
+            <mat-form-field>
+                    <input matInput type="text"   formControlName="personIdTupe"
+                        class="form-control">
+                </mat-form-field>
+    </form>
+    <button type="submit" class="btn btn-default" (click)='logFormValue()'>Submit</button>
 </div>
